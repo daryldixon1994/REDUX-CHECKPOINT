@@ -1,0 +1,55 @@
+.td-item {
+    display: flex;
+    width: 75%;
+    margin: auto;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(210, 180, 228, 0.411);
+    box-shadow: 5px 5px 5px rgb(215, 160, 247);
+}
+button {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+.check-done:hover {
+    color: rgb(54, 236, 54);
+}
+label {
+    cursor: pointer;
+}
+label:hover {
+    color: rgb(255, 60, 0);
+}
+input[type="radio"] {
+    display: none;
+}
+h2 {
+    width: 100%;
+    word-wrap: break-word;
+    height: auto;
+}
+.box {
+    width: 50%;
+}
+.editTaskNameBox {
+    margin: 12px;
+}
+.button > button {
+    margin-top: 5px;
+    background-color: transparent;
+    border: 1px black solid;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+}
+.button > button:hover {
+    background-color: rgb(255, 67, 77);
+    color: wheat;
+}
+h2{
+    color: rgb(56, 2, 95);
+}

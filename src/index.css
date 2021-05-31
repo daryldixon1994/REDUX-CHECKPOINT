@@ -1,13 +1,36 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+    font-family: "MonteCristo";
+    src: url("./Fonts/MonteCristo.eot");
+    src: local("./Fonts/MonteCristo"),
+        url("./Fonts/MonteCristo.woff") format("woff"),
+        url("./Fonts/MonteCristo.ttf") format("truetype");
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    margin: 0;
+    background-image: linear-gradient(
+        to right top,
+        #d16ba5,
+        #c777b9,
+        #ba83ca,
+        #aa8fd8,
+        #9a9ae1,
+        #8aa7ec,
+        #79b3f4,
+        #69bff8,
+        #52cffe,
+        #41dfff,
+        #46eefa,
+        #5ffbf1
+    );
+    height: 1200px;
+}
+.fontsforweb_fontid_79300 {
+    font-family: "MonteCristo" !important;
+    width: 50%;
+    font-size: 8em;
+    color: rgb(153, 0, 153);
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    font-style: "MonteCristo";
 }

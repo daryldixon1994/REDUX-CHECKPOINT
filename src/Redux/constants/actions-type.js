@@ -1,0 +1,15 @@
+export const TEXT_INPUT = "TEXT_INPUT";
+export const ADD_TODO = "ADD_TODO";
+export const CLEAR = "CLEAR";
+export const START_COUNT = "START_COUNT";
+export const REMOVE_TODO = "REMOVE_TODO";
+export const DONE = "DONE";
+export const ALL_DONE = "ALL_DONE";
+export const ALL_SELECTED = "ALL_SELECTED";
+export const ALL_DESELCTED = "ALL_DESELCTED";
+export const FINISHED_TASK = "FINISHED_TASK";
+export const SHOW_UNFINISHED_TASK = "SHOW_UNFINISHED_TASK";
+export const EDIT_TASK = "EDIT_TASK";
+export const SET_NEW_TASK = "SET_NEW_TASK";
+export const SUBMIT_Task = "SUBMIT_Task";
+export const MY_TITLE = "MY_TITLE";

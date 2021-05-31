@@ -3,21 +3,16 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createStore } from "redux";
-import allReducers from "./reducers/index";
 import { Provider } from "react-redux";
-
-const store = createStore(
-    allReducers,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+import store from "./Redux/Store/store";
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Provider store={store}>
+    <Provider store={store}>
+        <React.StrictMode>
+            <h1 className="fontsforweb_fontid_79300">Todo List</h1>
             <App />
-        </Provider>
-    </React.StrictMode>,
+        </React.StrictMode>
+    </Provider>,
     document.getElementById("root")
 );
 

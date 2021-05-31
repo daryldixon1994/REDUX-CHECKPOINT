@@ -1,20 +1,13 @@
-import { useSelector, useDispatch } from "react-redux";
-import {increment} from './actions/increment';
-import {decrement} from './actions/decrement';
-import {logIn} from './actions/LogIn';
-
+import Header from "./Components/Header/Header";
+import TodoList from "./Components/MainSection/TodoList/TodoList";
+import Footer from "./Components/Footer/Footer"
+import './App.css'
 function App() {
-    const counter = useSelector((state) => state.counter);
-    const logger = useSelector((state) => state.isLogged);
-    const dispatch = useDispatch();
     return (
         <div className="App">
-            <h1>Hello</h1>
-            <p>Counter {counter}</p>
-            <button onClick={() => dispatch(increment())}>+</button>
-            <button onClick={() => dispatch(decrement())}>-</button>
-            <br />
-            <button onClick={() => dispatch(logIn())}>Click me</button>
+            <Header />
+            <TodoList />
+            <Footer />
         </div>
     );
 }
