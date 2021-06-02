@@ -64,6 +64,7 @@ function TodoItem({ elt, index }) {
                             <input
                                 type="text"
                                 name="edit_text"
+                                defaultValue={elt.task}
                                 onChange={handelChange}
                             />
                             <button onClick={submitNewTask}>Edit</button>
