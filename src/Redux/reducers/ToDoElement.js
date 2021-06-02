@@ -7,6 +7,7 @@ import {
     EDIT_TASK,
     SET_NEW_TASK,
     SUBMIT_Task,
+    REMOVE_ALL
 } from "../constants/actions-type";
 const initState = [];
 
@@ -42,6 +43,8 @@ const ToDoElement = (state = initState, action) => {
             return state.map((elt) =>
                 elt.id === load ? { ...elt, edit: !elt.edit } : elt
             );
+        case REMOVE_ALL:
+            return state = []
         default:
             return state;
     }

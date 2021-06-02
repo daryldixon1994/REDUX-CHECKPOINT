@@ -1,16 +1,23 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import TodoItem from "../TodoItem/TodoItem";
+import {AiFillDelete} from 'react-icons/ai'
+import {useDispatch} from 'react-redux'
+import {removeAll} from '../../../Redux/actions'
 import "./TodoList.css";
 
 const TodoList = () => {
     const todoList = useSelector((state) => state.ToDoElement);
     const doneTasks = useSelector((state) => state.taskIsDone.done);
     const notDoneTasks = useSelector((state) => state.taskNotDone.notDone);
-
+    const dispatch = useDispatch()
+    const handelClick =()=> {
+        dispatch(removeAll())
+    }
     return (
         <div className="td-list-container">
-            {doneTasks
+            <div>
+                {doneTasks
                 ? todoList
                       .filter((elt) => elt.isDone === true)
                       .map((elt, index) => (
@@ -43,6 +50,11 @@ const TodoList = () => {
                           />
                       </div>
                   ))}
+                  </div>
+            <div className="tbnou">
+                <button type="button" className='btn-grad' onClick={handelClick}><AiFillDelete size={40}/></button>
+            </div>
+            
         </div>
     );
 };

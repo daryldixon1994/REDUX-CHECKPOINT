@@ -13,3 +13,4 @@ export const EDIT_TASK = "EDIT_TASK";
 export const SET_NEW_TASK = "SET_NEW_TASK";
 export const SUBMIT_Task = "SUBMIT_Task";
 export const MY_TITLE = "MY_TITLE";
+export const REMOVE_ALL = "REMOVE_ALL";

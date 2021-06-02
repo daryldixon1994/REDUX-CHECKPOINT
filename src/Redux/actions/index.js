@@ -13,6 +13,7 @@ import {
     SET_NEW_TASK,
     SUBMIT_Task,
     MY_TITLE,
+    REMOVE_ALL
 } from "../constants/actions-type";
 
 
@@ -99,5 +100,10 @@ export function editTitle(e) {
     return {
         type : MY_TITLE,
         e,
+    }
+}
+export function removeAll() {
+    return {
+        type : REMOVE_ALL,
     }
 }
