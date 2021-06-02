@@ -11,8 +11,9 @@ import {
 } from "../../../Redux/actions";
 import "./TodoItem.css";
 
-function TodoItem({ elt, index, todoList }) {
+function TodoItem({ elt, index }) {
     let dispatch = useDispatch();
+    
     const handelClick = () => {
         dispatch(removeTodo(index));
     };

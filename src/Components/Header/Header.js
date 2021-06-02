@@ -8,7 +8,7 @@ import {
     testCheck,
     editTitle,
 } from "../../Redux/actions";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaPencilAlt } from "react-icons/fa";
 import { AiOutlinePlus } from "react-icons/ai";
 import { FcTodoList } from "react-icons/fc";
 import "./Header.css";
@@ -34,8 +34,7 @@ function Header() {
         dispatch(editTitle(e));
     };
     const [ok, setOk] = useState(false);
-    const handelOk = (e) => {
-        e.preventDefault();
+    const handelOk = () => {
         setOk(!ok);
     };
     const myTitle = useSelector((state) => state.todoTitle.title);
@@ -55,6 +54,7 @@ function Header() {
                                 />
                             </label>
                         </form>
+
                         <form>
                             <label style={{ marginLeft: "18px" }}>
                                 <FaArrowRight size={25} color={"#7798ea"} />
@@ -71,6 +71,7 @@ function Header() {
             {ok ? (
                 <div className="myTitle">
                     <h1> {myTitle}</h1>
+                    <button onClick={handelOk}><FaPencilAlt /></button>
                 </div>
             ) : null}
 

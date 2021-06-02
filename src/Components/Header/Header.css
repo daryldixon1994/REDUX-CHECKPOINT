@@ -53,4 +53,18 @@ button {
 }
 .myTitle {
     font-size: 1.5em;
+    display: flex;
+    align-items: baseline;
+}
+.myTitle > button {
+    background-color: transparent;
+    width: auto;
+    border: none;
+    border-bottom: 1px black solid;
+}
+.myTitle > button:hover {
+    color: orangered;
+}
+.myTitle > button:active {
+    color: violet;
 }
