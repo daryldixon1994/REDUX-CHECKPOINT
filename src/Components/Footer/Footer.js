@@ -15,7 +15,7 @@ function Footer() {
     const doneTasks = useSelector((state) => state.taskIsDone.done);
     const notDoneTasks = useSelector((state) => state.taskNotDone.notDone);
     const todoList = useSelector((state) => state.ToDoElement);
-    console.log(todoList.length);
+  
     const handelClick = () => {
         dispatch(DeselectALL());
     };

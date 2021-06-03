@@ -7,12 +7,30 @@ import {
     EDIT_TASK,
     SET_NEW_TASK,
     SUBMIT_Task,
-    REMOVE_ALL
+    REMOVE_ALL,
 } from "../constants/actions-type";
-const initState = [];
+const initState = [
+    {
+        task: "Travel",
+        id: 12121,
+        isDone: false,
+        edit: false,
+    },
+    {
+        task: "Sport",
+        id: 28548,
+        isDone: false,
+        edit: false,
+    },
+    {
+        task: "Read a book",
+        id: 32599,
+        isDone: false,
+        edit: false,
+    },
+];
 
 const ToDoElement = (state = initState, action) => {
-   
     let { type, newTask, pos, payload, editStatut, e, eltPos, load } = action;
     switch (type) {
         case ADD_TODO:
@@ -44,7 +62,7 @@ const ToDoElement = (state = initState, action) => {
                 elt.id === load ? { ...elt, edit: !elt.edit } : elt
             );
         case REMOVE_ALL:
-            return state = []
+            return (state = []);
         default:
             return state;
     }
