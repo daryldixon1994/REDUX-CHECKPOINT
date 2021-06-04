@@ -6,7 +6,6 @@ import taskIsDone from "./taskIsDone";
 import taskNotDone from "./taskNotDone";
 import todoTitle from "./todoTitle";
 
-
 const allReducers = combineReducers({
     TodoTextInput,
     ToDoElement,

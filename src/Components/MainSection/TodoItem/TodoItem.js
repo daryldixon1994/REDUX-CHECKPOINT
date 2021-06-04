@@ -13,7 +13,7 @@ import "./TodoItem.css";
 
 function TodoItem({ elt, index }) {
     let dispatch = useDispatch();
-    
+
     const handelClick = () => {
         dispatch(removeTodo(index));
     };
@@ -26,12 +26,12 @@ function TodoItem({ elt, index }) {
     const handelEditTask = () => {
         dispatch(EditTask(elt.id));
     };
-    const handelChange =(e)=> {
-        dispatch(SetNewTask(e, elt.id))
-    }
-    const submitNewTask = ()=> {
-        dispatch(SubmitTask(elt.id))
-    }
+    const handelChange = (e) => {
+        dispatch(SetNewTask(e, elt.id));
+    };
+    const submitNewTask = () => {
+        dispatch(SubmitTask(elt.id));
+    };
     return (
         <div
             className="td-item"

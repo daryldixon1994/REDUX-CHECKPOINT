@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Footer.css";
 import { useSelector, useDispatch } from "react-redux";
 import { BiTask, BiTaskX, BiUndo } from "react-icons/bi";
@@ -15,7 +15,14 @@ function Footer() {
     const doneTasks = useSelector((state) => state.taskIsDone.done);
     const notDoneTasks = useSelector((state) => state.taskNotDone.notDone);
     const todoList = useSelector((state) => state.ToDoElement);
-  
+
+    let count =0;
+    for (let i=0; i< todoList.length; i++){
+        if (todoList[i].isDone === true) {
+            count = count + 1;
+        }
+    }
+
     const handelClick = () => {
         dispatch(DeselectALL());
     };
@@ -76,6 +83,8 @@ function Footer() {
             </div>
 
             <h4>{todoList.length} Task(s) to do</h4>
+            <h4>Completed Tasks: {count}</h4>
+            <h4>Uncompleted Tasks: {todoList.length - count}</h4>
         </div>
     );
 }

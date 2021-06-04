@@ -31,12 +31,16 @@ function Header() {
         dispatch(testCheck());
     };
     const handelTitle = (e) => {
+        e.preventDefault();
         dispatch(editTitle(e));
     };
     const [ok, setOk] = useState(false);
-    const handelOk = () => {
+
+    const handelOk = (e) => {
+        e.preventDefault();
         setOk(!ok);
     };
+
     const myTitle = useSelector((state) => state.todoTitle.title);
     /* const todoInput = useSelector(state => state.TodoTextInput.task) */
     return (
@@ -68,10 +72,13 @@ function Header() {
                     </div>
                 )}
             </div>
+
             {ok ? (
                 <div className="myTitle">
                     <h1> {myTitle}</h1>
-                    <button onClick={handelOk}><FaPencilAlt /></button>
+                    <button onClick={handelOk}>
+                        <FaPencilAlt />
+                    </button>
                 </div>
             ) : null}
 

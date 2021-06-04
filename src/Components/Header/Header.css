@@ -53,8 +53,14 @@ button {
 }
 .myTitle {
     font-size: 1.5em;
+    width: 80%;
     display: flex;
-    align-items: baseline;
+    align-items: flex-end;
+}
+.myTitle > h1 {
+    width: 70%;
+    margin: auto;
+    word-break: break-all;
 }
 .myTitle > button {
     background-color: transparent;

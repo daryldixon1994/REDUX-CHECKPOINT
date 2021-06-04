@@ -13,7 +13,7 @@ import {
     SET_NEW_TASK,
     SUBMIT_Task,
     MY_TITLE,
-    REMOVE_ALL
+    REMOVE_ALL,
 } from "../constants/actions-type";
 
 
