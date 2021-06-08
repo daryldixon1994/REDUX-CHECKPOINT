@@ -60,6 +60,7 @@ const TodoList = () => {
                     type="button"
                     className="btn-grad"
                     onClick={handelClick}
+                    title="Delete all Tasks"
                 >
                     <AiFillDelete size={40} />
                 </button>

@@ -55,6 +55,7 @@ function Header() {
                                     name="todo_list"
                                     placeholder="TODO LIST NAME"
                                     onChange={handelTitle}
+                                    required
                                 />
                             </label>
                         </form>
@@ -85,7 +86,10 @@ function Header() {
             <div className="td-main-header">
                 {test ? null : (
                     <div>
-                        <label style={{ marginRight: "20px" }}>
+                        <label
+                            style={{ marginRight: "20px" }}
+                            title="Select all tasks as Done!"
+                        >
                             <FcTodoList size={30} color={"#7798ea"} />
                             <input
                                 type="checkbox"
@@ -101,11 +105,12 @@ function Header() {
                         placeholder="Need to do something?"
                         value={newTaskElt}
                         onChange={handelChange}
+                        required
                     />
                 </form>
 
                 <div>
-                    <label style={{ marginLeft: "20px" }}>
+                    <label style={{ marginLeft: "20px" }} title="Add a task">
                         <AiOutlinePlus size={40} color={"#7798ea"} />
                         <input
                             type="checkbox"

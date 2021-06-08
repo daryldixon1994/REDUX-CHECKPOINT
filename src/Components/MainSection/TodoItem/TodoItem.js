@@ -39,7 +39,7 @@ function TodoItem({ elt, index }) {
         >
             <div>
                 <form>
-                    <label>
+                    <label title="Delete task">
                         <AiOutlineCloseCircle size={30} />
                         <input
                             type="radio"
@@ -74,7 +74,7 @@ function TodoItem({ elt, index }) {
             </div>
 
             <form>
-                <label className="check-done">
+                <label className="check-done" title="Edit task name">
                     <AiFillEdit
                         color={elt.edit ? "#2222cc" : "grey"}
                         size={30}
@@ -87,7 +87,7 @@ function TodoItem({ elt, index }) {
                 </label>
             </form>
             <form>
-                <label className="check-done">
+                <label className="check-done" title="Done!">
                     <IoMdCheckmarkCircleOutline
                         color={elt.isDone || test ? "green" : "grey"}
                         size={30}

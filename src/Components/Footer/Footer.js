@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./Footer.css";
 import { useSelector, useDispatch } from "react-redux";
 import { BiTask, BiTaskX, BiUndo } from "react-icons/bi";
@@ -16,8 +16,8 @@ function Footer() {
     const notDoneTasks = useSelector((state) => state.taskNotDone.notDone);
     const todoList = useSelector((state) => state.ToDoElement);
 
-    let count =0;
-    for (let i=0; i< todoList.length; i++){
+    let count = 0;
+    for (let i = 0; i < todoList.length; i++) {
         if (todoList[i].isDone === true) {
             count = count + 1;
         }
@@ -39,7 +39,10 @@ function Footer() {
             <div>
                 {test ? (
                     <div>
-                        <label style={{ marginLeft: "20px" }}>
+                        <label
+                            style={{ marginLeft: "20px" }}
+                            title="Deselect all"
+                        >
                             <CgPlayListRemove size={60} color={"#7798ea"} />
                             <input
                                 type="checkbox"
@@ -52,7 +55,10 @@ function Footer() {
             </div>
 
             <div>
-                <label style={{ marginLeft: "20px" }}>
+                <label
+                    style={{ marginLeft: "20px" }}
+                    title="Show finished tasks"
+                >
                     {doneTasks ? (
                         <BiUndo size={60} color={"#7798ea"} />
                     ) : (
@@ -67,7 +73,10 @@ function Footer() {
                 </label>
             </div>
             <div>
-                <label style={{ marginLeft: "20px" }}>
+                <label
+                    style={{ marginLeft: "20px" }}
+                    title="Show unfinished tasks"
+                >
                     {notDoneTasks ? (
                         <BiUndo size={60} color={"#7798ea"} />
                     ) : (
